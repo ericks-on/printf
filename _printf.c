@@ -1,6 +1,9 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include "main.h"
+char *to_str(int n)
+{
+}
 /**
  * _printf - prints to stdout according to format
  * @format: like a guide to the function on how to print
@@ -9,7 +12,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, size;
+	int i, size, num;
 	char *str;
 	char chr;
 	va_list ap;
@@ -37,6 +40,13 @@ int _printf(const char *format, ...)
 				write(1, str, size);
 				i++;
 			}
+			else if (format[i] == 'd' || format[i] == 'i')
+			{
+				num = va_arg(ap, int);
+				write(1, &num, 1);
+				i++;
+			}
+			
 		}
 		chr = format[i];
 		write(1, &chr, 1);

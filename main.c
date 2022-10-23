@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 void main(void)
 {
 	char chr = 'o';
 	char *str = "printf";
 
-	_printf("this is my first test %cf the %s function", chr, str);
+	printf("this is my first test \% f the % function");
 }

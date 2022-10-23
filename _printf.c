@@ -1,9 +1,6 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include "main.h"
-char *to_str(int n)
-{
-}
 /**
  * _printf - prints to stdout according to format
  * @format: like a guide to the function on how to print
